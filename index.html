@@ -1,34 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FilmFlow</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FilmFlow</title>
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
+  <body>
+    <!-- NAVBAR START -->
+    <nav>
+      <div class="burger">
+        <button id="burger-btn" class="burger-btn">&#9776;</button>
 
-<body>
-  <!-- NAVBAR START -->
-  <nav>
-    <div class="burger">
-      <button id="burger-btn" class="burger-btn">&#9776;</button>
-
-      <div id="burger-menu" class="burger-menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-        <form class="formSearch">
-          <input id="inpSearch" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btnSearch" type="submit">Search</button>
-        </form>
+        <div id="burger-menu" class="burger-menu">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+          <form class="formSearch">
+            <input
+              id="inpSearch"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btnSearch" type="submit">Search</button>
+          </form>
+        </div>
       </div>
+    </nav>
+    <!-- NAVBAR FINISH -->
+    <!-- ADD PANEL START -->
+    <div class="wrapper">
+      <div class="auth-form">
+        <h2>
+          <button id="createFilmButton">Создать фильм</button>
+        </h2>
+        <div class="field" id="filmForm">
+          <input type="file" id="photoFilm" placeholder="Изображение" />
+          <input
+            class="task-input"
+            type="text"
+            id="filmName"
+            placeholder="Название фильма"
+          />
+          <input
+            class="task-input"
+            type="text"
+            id="filmDirector"
+            placeholder="Режиссёр"
+          />
+          <input
+            class="task-input"
+            type="text"
+            id="filmGenre"
+            placeholder="Жанр"
+          />
+          <input
+            class="task-input"
+            type="text"
+            id="filmYear"
+            placeholder="Год выпуска"
+          />
+          <button class="btn">Добавить фильм</button>
+        </div>
+      </div>
+      <!-- ADD PANEL FINISH -->
+      <!-- SECTION BOOKS START -->
+      <section class="sectionFilms"></section>
+      <!-- SECTION BOOKS FINISH -->
+      <!-- PAGINATIONS START -->
+      <div aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a id="prevBtn" class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item">
+            <a id="nextBtn" class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </div>
+      <!-- PAGINATIONS FINISH -->
+      <!-- EDIT MODAL START -->
+      <div class="editModal">
+        <div class="field" id="filmForm">
+          <input type="file" id="editphotoFilm" placeholder="Изображение" />
+          <input
+            class="inpEdit"
+            type="text"
+            id="editfilmName"
+            placeholder="Название фильма"
+          />
+          <input
+            class="inpEdit"
+            type="text"
+            id="editfilmDirector"
+            placeholder="Режиссёр"
+          />
+          <input
+            class="inpEdit"
+            type="text"
+            id="editfilmGenre"
+            placeholder="Жанр"
+          />
+          <input
+            class="inpEdit"
+            type="text"
+            id="editfilmYear"
+            placeholder="Год выпуска"
+          />
+          
+        </div>
+        <button id ="btnEditSave">Сохранить</button>
     </div>
-  </nav>
-  <!-- NAVBAR FINISH -->
-
-  <script src="./js/main.js"></script>
-</body>
-
+    <!-- EDIT MODAL FINISH -->
+    <script src="./js/main.js"></script>
+  </body>
 </html>
